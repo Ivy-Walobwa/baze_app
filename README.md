@@ -51,10 +51,10 @@ You can view our development process from data collection to design here: [Baze 
 #### Payment
 <img src="https://user-images.githubusercontent.com/49009293/113210959-84b5b400-927d-11eb-83b9-3a1169d38566.png" width="100"><img src="https://user-images.githubusercontent.com/49009293/113210963-85e6e100-927d-11eb-8004-91e8b2d51025.png" width="100">
 
-#### Tenant
+#### Tenant demo
 https://user-images.githubusercontent.com/49009293/113216156-93ec3000-9284-11eb-8837-abadbd1ba10d.mp4
 
-#### Landlors
+#### Landlord demo
 https://user-images.githubusercontent.com/49009293/113216161-951d5d00-9284-11eb-8fa5-a82e8f2d63c8.mp4
 
 
@@ -66,7 +66,7 @@ https://user-images.githubusercontent.com/49009293/113216161-951d5d00-9284-11eb-
 #### How to use
 
 **1. Required to run project:**
-      You can check requirements here: [FlutterSetup](https://flutter.dev/docs/get-started/install)
+      You can check flutter environment setup requirements here: [FlutterSetup](https://flutter.dev/docs/get-started/install)
 
 
 **2. Clone this repository :**
