@@ -5,7 +5,9 @@
   <h3 align="center">BAZE APP</h3>
 
   <p align="center">
-    Hostel/ Room identification platform where students at the campus can be able to easily identify desired residential rooms <br>
+ Utilizing flutter,not forgetting the inspiration from material design and its resources, we came up with an app that will help students who come from different parts of the country and east African region find an affordable place to stay as they study and make their dreams come true.
+  <br>
+      Hostel/ Room identification platform where students at the campus can be able to easily identify desired residential rooms. <br>
    Landlords can manage their residentials through the app too
     </p>
 </p>
