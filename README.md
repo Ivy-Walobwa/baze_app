@@ -36,6 +36,11 @@ As a landlord, you are able to manage your hostels: edit it's details, view tena
 You can view our development process from data collection to design here: [Baze app development process](https://docs.google.com/document/d/1W_7QBdEzwXl11JDvdDyy6V6FJwlm-kXnQW03iF__Csw/edit). To view some files you'll need to request access.
 <hr>
 
+#### Personas
+![Persona Canvas (1)](https://user-images.githubusercontent.com/49009293/113217583-cbf47280-9286-11eb-8c8c-d9683aca1460.png)
+![Persona Canvas](https://user-images.githubusercontent.com/49009293/113217608-d282ea00-9286-11eb-996d-69c435f46540.png)
+
+
 ## General Preview
 #### Hostels
 <img src="https://user-images.githubusercontent.com/49009293/113209976-63a09380-927c-11eb-9630-6bffdec6e417.png" width="100"><img src="https://user-images.githubusercontent.com/49009293/113209981-64d1c080-927c-11eb-828d-617a4ca8de13.png" width="100">
