@@ -1,4 +1,3 @@
-import 'package:baze/ui/widgets/home/search_text_field.dart';
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../menu/menu.dart';
@@ -22,7 +21,7 @@ class LandLordHomePage extends StatelessWidget {
         userName: 'Chebet Doris',
         buttonText: 'Post Advert',
         buttonColor: yellowColor,
-        onTap: (){},
+        onTap: () {},
         iconTextWidgets: [
           IconTextWidget(icon: Icons.apartment, text: 'My Hostel'),
           IconTextWidget(
@@ -103,65 +102,64 @@ class LandLordHomePage extends StatelessWidget {
 
   ConditionalViewWithTwoIcons buildRevenueBreakDown(BuildContext context) {
     return ConditionalViewWithTwoIcons(
-                    text: 'Revenue Breakdown',
-                    conditionalWidget: Text('Coming Soon', style: Theme.of(context).textTheme.bodyText1.copyWith(color: brownColor),),
-                    iconWidget: Icon(
-                      Icons.remove_red_eye,
-                      color: brownColor,
-                    ),
-                    widgetColor: brownColor);
+        text: 'Revenue Breakdown',
+        conditionalWidget: Text(
+          'Coming Soon',
+          style:
+              Theme.of(context).textTheme.bodyText1.copyWith(color: brownColor),
+        ),
+        iconWidget: Icon(
+          Icons.remove_red_eye,
+          color: brownColor,
+        ),
+        widgetColor: brownColor);
   }
 
   ConditionalView buildHostelTenants(BuildContext context) {
     return ConditionalView(
-                  text: 'Hostel Tenants',
-                  conditionalWidget: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                              child: SearchTextField(
-                            fieldcolor: brownColor,
-                          )),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Icon(Icons.filter_alt),
-                        ],
-                      ),
-                      TenantTable(),
-                      SizedBox(height: 20,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Load Full list of tenants',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText1
-                                .copyWith(
-                                    color: yellowColor,
-                                    decoration: TextDecoration.underline),
-                          ),
-                          SizedBox(
-                            width: 4,
-                          ),
-                          CircleAvatar(
-                            child: Icon(
-                              Icons.double_arrow,
-                              size: 15,
-                              color: whiteColor,
-                            ),
-                            radius: 12,
-                            backgroundColor: yellowColor,
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                  iconColor: brownColor,
-                );
+      text: 'Hostel Tenants',
+      conditionalWidget: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(child: SearchTextField(fieldColor: brownColor, text: 'Search Hostel',)),
+              SizedBox(
+                width: 30,
+              ),
+              Icon(Icons.filter_alt),
+            ],
+          ),
+          TenantTable(),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Load Full list of tenants',
+                style: Theme.of(context).textTheme.bodyText1.copyWith(
+                    color: yellowColor, decoration: TextDecoration.underline),
+              ),
+              SizedBox(
+                width: 4,
+              ),
+              CircleAvatar(
+                child: Icon(
+                  Icons.double_arrow,
+                  size: 15,
+                  color: whiteColor,
+                ),
+                radius: 12,
+                backgroundColor: yellowColor,
+              )
+            ],
+          )
+        ],
+      ),
+      iconColor: brownColor,
+    );
   }
 
   Container buildNewRoomContainer(BuildContext context) {
@@ -360,5 +358,3 @@ class LandLordHomePage extends StatelessWidget {
         ));
   }
 }
-
-

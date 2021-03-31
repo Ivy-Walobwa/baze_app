@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
 
 class SearchTextField extends StatelessWidget {
-  const SearchTextField({
-    @required this.fieldcolor,
-    this.padding = 0
-  });
+  const SearchTextField(
+      {@required this.fieldColor, this.padding = 0, @required this.text});
 
-  final Color fieldcolor;
+  final Color fieldColor;
   final double padding;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.all(padding),
+      padding: EdgeInsets.all(padding),
       child: Row(
         children: [
           Expanded(
             child: TextField(
               decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: fieldcolor),
+                  borderSide: BorderSide(color: fieldColor),
                 ),
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: fieldcolor),
+                  borderSide: BorderSide(color: fieldColor),
                 ),
                 border: UnderlineInputBorder(
-                  borderSide: BorderSide(color: fieldcolor),
+                  borderSide: BorderSide(color: fieldColor),
                 ),
-                hintText: 'Search Hostel',
+                hintText: text,
                 hintStyle: Theme.of(context)
                     .textTheme
                     .bodyText1
-                    .copyWith(color: fieldcolor),
+                    .copyWith(color: fieldColor),
               ),
             ),
           ),
@@ -40,7 +39,7 @@ class SearchTextField extends StatelessWidget {
           ),
           Icon(
             Icons.search,
-            color: fieldcolor,
+            color: fieldColor,
           )
         ],
       ),

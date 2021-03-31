@@ -4,3 +4,6 @@ export 'home/land_lord_home_page.dart';
 export 'hostels/profile_card_tenant.dart';
 export 'payments/changia_msee.dart';
 export 'payments/pay_rent_page.dart';
+export 'hostels/results_page.dart';
+export 'profile/find_roommate.dart';
+export 'profile/roommate_result_page.dart';

@@ -9,6 +9,13 @@ import '../../widgets/text_button_widget.dart';
 import '../menu/menu.dart';
 import '../../widgets/menu/icon_text_widget.dart';
 
+var categories = [
+  {'title': 'Hostels on a budget', 'subtitle': 'The cheapest hostels around campus.',},
+  {'title': 'Clean and secure', 'subtitle': 'Simple pleasures that go a long way.',},
+  {'title': 'Nearest to Campus', 'subtitle': 'Don’t be too away from home.',},
+  {'title': 'Best Doubles', 'subtitle': 'Cool roomies, cool digs.',},
+];
+
 class TenantHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +27,7 @@ class TenantHomePage extends StatelessWidget {
         userName: 'Majid Michael',
         buttonText: 'Chaangia Msee',
         buttonColor: greenColor,
-        onTap:  () {
+        onTap: () {
           Navigator.of(context).popAndPushNamed(changiaMseePageRoute);
         },
         iconTextWidgets: [IconTextWidget(
@@ -30,7 +37,8 @@ class TenantHomePage extends StatelessWidget {
           IconTextWidget(
             icon: Icons.payments,
             text: 'My money',
-          ),],
+          ),
+        ],
       ),
       appBar: AppBar(
         elevation: 0,
@@ -52,7 +60,11 @@ class TenantHomePage extends StatelessWidget {
         title: Text(
           'Karibu home Majid',
           style:
-              Theme.of(context).textTheme.headline3.copyWith(color: whiteColor),
+          Theme
+              .of(context)
+              .textTheme
+              .headline3
+              .copyWith(color: whiteColor),
         ),
         centerTitle: true,
       ),
@@ -60,7 +72,7 @@ class TenantHomePage extends StatelessWidget {
         physics: ScrollPhysics(),
         child: Column(
           children: [
-            SearchTextField(fieldcolor: whiteColor,padding: 32,),
+            SearchTextField(fieldColor: whiteColor, padding: 32,text: 'Search Hostel',),
             Image.asset('assets/weekhostel.png'),
             TwoColorCaption(),
             TopRatingTitle(),
@@ -70,31 +82,31 @@ class TenantHomePage extends StatelessWidget {
             ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemBuilder: (ctx, idx) => Padding(
-                padding:
+              itemBuilder: (ctx, idx) =>
+                  Padding(
+                    padding:
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                child: InkWell(
-                  child: HostelListTile(
-                    hostel: hostelsAvailable[idx],
-                    index: idx,
+                    child: InkWell(
+                      child: HostelListTile(
+                        hostel: hostelsAvailable[idx],
+                        index: idx,
+                      ),
+                      onTap: () {
+                        Navigator.pushNamed(context, hostelProfileCardRoute,
+                            arguments: hostelsAvailable[idx]);
+                      },
+                    ),
                   ),
-                  onTap: () {
-                    Navigator.pushNamed(context, hostelProfileCardRoute,
-                        arguments: hostelsAvailable[idx]);
-                  },
-                ),
-              ),
               itemCount: hostelsAvailable.length,
             ),
             SizedBox(
               height: 30,
             ),
-            CategoryView(),
-            CategoryView(),
-            CategoryView(),
+            ...categories.map((e) => CategoryView(title: e['title'],subtitle: e['subtitle'],)),
             Text(
               'Would you like to find a roomie?',
-              style: Theme.of(context)
+              style: Theme
+                  .of(context)
                   .textTheme
                   .bodyText1
                   .copyWith(color: whiteColor),
@@ -103,7 +115,9 @@ class TenantHomePage extends StatelessWidget {
               text: 'FIND A ROOMIE',
               textColor: brownColor,
               buttonColor: whiteColor,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(findARoomieRoute);
+              },
             ),
             SizedBox(
               height: 54,

@@ -14,3 +14,7 @@ const landLordHomeRoute = '/land-lord';
 const hostelProfileCardRoute = '/hostel-profile';
 const changiaMseePageRoute = '/changia-msee';
 const payRentRoute = '/pay-rent';
+const hostelResultsPageRoute = '/hostel-results';
+const findARoomieRoute = '/find-roomie';
+const roommateResultRoute = '/roommate-result';
+

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
-import 'custom_button.dart';
+import '../custom_button.dart';
 
 class PaymentMethodsContainer extends StatelessWidget {
   const PaymentMethodsContainer({

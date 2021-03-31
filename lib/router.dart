@@ -20,6 +20,12 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_)=> ChangiaMsee());
       case payRentRoute:
         return MaterialPageRoute(builder: (_)=> PayRentPage());
+      case hostelResultsPageRoute:
+        return MaterialPageRoute(builder: (_)=> ResultsPage());
+      case findARoomieRoute:
+        return MaterialPageRoute(builder: (_)=> FindRoomiePage());
+      case roommateResultRoute:
+        return MaterialPageRoute(builder: (_)=> RoommateResultPage());
     }
   }
 }
