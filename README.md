@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/yourUserName/YourProjectName">
-    <img src="https://user-images.githubusercontent.com/49009293/113207155-f3444300-9278-11eb-8a95-1e2374517f51.png" alt="baze app" width=250 height=160>
+    <img src="https://user-images.githubusercontent.com/49009293/113207155-f3444300-9278-11eb-8a95-1e2374517f51.png" alt="baze app" width=150 height=160>
   </a>
   <h3 align="center">BAZE APP</h3>
 
@@ -44,6 +44,13 @@ You can view our development process from data collection to design here: [Baze 
 #### Payment
 <img src="https://user-images.githubusercontent.com/49009293/113210959-84b5b400-927d-11eb-83b9-3a1169d38566.png" width="100"><img src="https://user-images.githubusercontent.com/49009293/113210963-85e6e100-927d-11eb-8004-91e8b2d51025.png" width="100">
 
+#### Tenant
+https://user-images.githubusercontent.com/49009293/113216156-93ec3000-9284-11eb-8837-abadbd1ba10d.mp4
+
+#### Landlors
+https://user-images.githubusercontent.com/49009293/113216161-951d5d00-9284-11eb-8fa5-a82e8f2d63c8.mp4
+
+
 <hr>
 
 
@@ -72,5 +79,3 @@ You can view our development process from data collection to design here: [Baze 
  
 <hr>
 
-## License 
-* see [LICENSE](https://github.com/Ivy-Walobwa/baze_app/LICENSE.md) file
