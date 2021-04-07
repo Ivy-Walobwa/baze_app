@@ -3,7 +3,7 @@ import 'models/hostel.dart';
 List<Hostel> hostelsAvailable = [
   Hostel(
     name: 'Picana Hostel',
-    rent: '15,000',
+    rent: '15000',
     rating: '4.7',
     roomsLeft: '2',
     image: 'assets/picana.png',
@@ -157,7 +157,7 @@ List<Hostel> hostelsAvailable = [
   ),
   Hostel(
     name: 'Alegro Hostel',
-    rent: '10,000',
+    rent: '10000',
     rating: '4.6',
     roomsLeft: '1',
     image: 'assets/alegro.png',

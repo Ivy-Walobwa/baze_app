@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../../fake_repository.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class HostelsCarousel extends StatelessWidget {
 
