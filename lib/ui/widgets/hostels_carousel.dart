@@ -3,6 +3,7 @@ import '../../constants.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:provider/provider.dart';
 import '../../models/hostel.dart';
+import '../../providers/hostel_provider.dart';
 
 class HostelsCarousel extends StatelessWidget {
 
@@ -36,7 +37,9 @@ class HostelsCarousel extends StatelessWidget {
                 ],
               ),
               onTap:(){
-                Navigator.of(context).pushNamed(hostelProfileCardRoute,arguments: hostel);
+                var idx = hostelsAvailable.indexOf(hostel);
+                Provider.of<HostelProvider>(context,listen: false).setHostelIdx(idx);
+                Navigator.of(context).pushNamed(hostelProfileCardRoute,);
               },
             );
           },

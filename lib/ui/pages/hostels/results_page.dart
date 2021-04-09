@@ -3,6 +3,7 @@ import '../../../constants.dart';
 import '../../widgets/home/hostel_list_tile.dart';
 import 'package:provider/provider.dart';
 import '../../../models/hostel.dart';
+import '../../../providers/hostel_provider.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
@@ -55,6 +56,7 @@ class ResultsPage extends StatelessWidget {
                             index: idx,
                           ),
                           onTap: () {
+                            Provider.of<HostelProvider>(context,listen: false).setHostelIdx(idx);
                             Navigator.pushNamed(context, hostelProfileCardRoute,
                                 arguments: hostelsAvailable[idx]);
                           },
