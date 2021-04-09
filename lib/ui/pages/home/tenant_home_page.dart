@@ -1,24 +1,22 @@
+import 'package:baze/models/hostel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 import '../../widgets/home/hostel_list_tile.dart';
-import '../../../fake_repository.dart';
 import '../../widgets/home/home.dart';
 import '../../widgets/text_button_widget.dart';
 import '../menu/menu.dart';
 import '../../widgets/menu/icon_text_widget.dart';
+import '../../../providers/hostel_provider.dart';
 
-var categories = [
-  {'title': 'Hostels on a budget', 'subtitle': 'The cheapest hostels around campus.',},
-  {'title': 'Clean and secure', 'subtitle': 'Simple pleasures that go a long way.',},
-  {'title': 'Nearest to Campus', 'subtitle': 'Don’t be too away from home.',},
-  {'title': 'Best Doubles', 'subtitle': 'Cool roomies, cool digs.',},
-];
 
 class TenantHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var categories = Provider.of<HostelProvider>(context).hostelCategories;
+    List<Hostel> hostels = Provider.of<List<Hostel>>(context);
     return Scaffold(
       backgroundColor: brownColor,
       drawer: MenuPage(
@@ -88,16 +86,15 @@ class TenantHomePage extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                     child: InkWell(
                       child: HostelListTile(
-                        hostel: hostelsAvailable[idx],
                         index: idx,
                       ),
                       onTap: () {
                         Navigator.pushNamed(context, hostelProfileCardRoute,
-                            arguments: hostelsAvailable[idx]);
+                            arguments: idx);
                       },
                     ),
                   ),
-              itemCount: hostelsAvailable.length,
+              itemCount: hostels.length,
             ),
             SizedBox(
               height: 30,

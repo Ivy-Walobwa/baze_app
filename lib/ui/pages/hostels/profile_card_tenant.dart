@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../models/hostel.dart';
 import '../../../constants.dart';
@@ -11,12 +12,14 @@ import '../../widgets/nb_widget.dart';
 import '../../widgets/conditional_view_with_two_icons.dart';
 
 class ProfileCardTenant extends StatelessWidget {
-  final Hostel hostelDetail;
+  final int index;
 
-  ProfileCardTenant({@required this.hostelDetail});
+  ProfileCardTenant({@required this.index});
 
   @override
   Widget build(BuildContext context) {
+    List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    Hostel hostelDetail = hostels[index];
     var gender = hostelDetail.gender.toString().split('.').last;
     return Scaffold(
         backgroundColor: brownColor,
@@ -172,6 +175,8 @@ class ProfileCardTenant extends StatelessWidget {
   }
 
   Row buildHostelName(BuildContext context) {
+    List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    Hostel hostelDetail = hostels[index];
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

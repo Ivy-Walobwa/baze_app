@@ -38,6 +38,7 @@ class Hostel {
 
   factory Hostel.fromJson(Map<String, dynamic> json) => _$HostelFromJson(json);
   Map<String, dynamic> toJson() => _$HostelToJson(this);
+
 }
 
 @JsonSerializable(explicitToJson: true)

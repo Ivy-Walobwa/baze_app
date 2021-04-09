@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 import '../../../models/hostel.dart';
 import '../rating_widget.dart';
 
 class HostelListTile extends StatelessWidget {
-  final Hostel hostel;
   final int index;
 
-  const HostelListTile({this.hostel, this.index});
+  const HostelListTile({this.index});
 
   @override
   Widget build(BuildContext context) {
+    List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    Hostel hostel = hostels[index];
     return Container(
       height: 136,
       decoration: BoxDecoration(

@@ -49,7 +49,6 @@ class ResultsPage extends StatelessWidget {
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                         child: InkWell(
                           child: HostelListTile(
-                            hostel: hostelsAvailable[idx],
                             index: idx,
                           ),
                           onTap: () {
