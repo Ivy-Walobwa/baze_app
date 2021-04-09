@@ -4,9 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'constants.dart';
 import 'router.dart';
-import 'services/firestore_database.dart';
 import 'providers/hostel_provider.dart';
-import 'fake_repository.dart';
 import 'models/hostel.dart';
 
 void main() async {
@@ -14,7 +12,7 @@ void main() async {
   await Firebase.initializeApp();
   runApp(MultiProvider(
     providers: [
-      StreamProvider<List<Hostel>>.value(value: FirestoreDatabase().hostels, initialData: []),
+      StreamProvider<List<Hostel>>.value(value: HostelProvider().allHostels, initialData: []),
       ChangeNotifierProvider(create: (_)=>HostelProvider()),
     ],
       child: MyApp()));

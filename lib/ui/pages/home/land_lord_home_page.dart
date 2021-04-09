@@ -3,15 +3,16 @@ import '../../../constants.dart';
 import '../menu/menu.dart';
 import '../../widgets/menu/icon_text_widget.dart';
 import '../../../models/hostel.dart';
-import '../../../fake_repository.dart';
 import '../../widgets/hostels/hostels.dart';
 import '../../widgets/widgets.dart';
 import '../../widgets/home/tenant_table.dart';
+import 'package:provider/provider.dart';
 
 class LandLordHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Hostel hostel = hostelsAvailable[2];
+    List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    Hostel hostel = hostels[2];
     var gender = hostel.gender.toString().split('.').last;
     return Scaffold(
       backgroundColor: whiteColor,

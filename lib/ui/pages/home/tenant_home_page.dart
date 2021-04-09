@@ -89,6 +89,7 @@ class TenantHomePage extends StatelessWidget {
                         index: idx,
                       ),
                       onTap: () {
+                        Provider.of<HostelProvider>(context,listen: false).setHostelIdx(idx);
                         Navigator.pushNamed(context, hostelProfileCardRoute,
                             arguments: idx);
                       },

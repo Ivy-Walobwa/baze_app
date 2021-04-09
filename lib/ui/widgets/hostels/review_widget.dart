@@ -13,7 +13,6 @@ class ReviewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(review.length == 0 ? '' : review[0].reviewerName);
     return review.length == 0
         ? Container(
             child: Text(

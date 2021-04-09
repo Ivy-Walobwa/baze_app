@@ -14,8 +14,7 @@ class CustomRouter {
       case landLordHomeRoute:
         return MaterialPageRoute(builder: (_)=> LandLordHomePage());
       case hostelProfileCardRoute:
-        var arguments = settings.arguments;
-        return MaterialPageRoute(builder: (_)=> ProfileCardTenant(index: arguments,));
+        return MaterialPageRoute(builder: (_)=> ProfileCardTenant());
       case changiaMseePageRoute:
         return MaterialPageRoute(builder: (_)=> ChangiaMsee());
       case payRentRoute:

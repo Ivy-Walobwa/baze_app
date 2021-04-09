@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../widgets/home/hostel_list_tile.dart';
-import '../../../fake_repository.dart';
+import 'package:provider/provider.dart';
+import '../../../models/hostel.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<Hostel> hostelsAvailable = Provider.of<List<Hostel>>(context);
+
     return Scaffold(
       backgroundColor: brownColor,
       body: SingleChildScrollView(

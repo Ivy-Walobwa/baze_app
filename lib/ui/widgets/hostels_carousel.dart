@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import '../../fake_repository.dart';
+import 'package:provider/provider.dart';
+import '../../models/hostel.dart';
 
 class HostelsCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Hostel> hostelsAvailable = Provider.of<List<Hostel>>(context);
+
     return CarouselSlider(
       options: CarouselOptions(
         viewportFraction: 0.35,

@@ -10,15 +10,15 @@ import '../../widgets/text_button_widget.dart';
 import '../../widgets/hostels_carousel.dart';
 import '../../widgets/nb_widget.dart';
 import '../../widgets/conditional_view_with_two_icons.dart';
+import '../../../providers/hostel_provider.dart';
 
 class ProfileCardTenant extends StatelessWidget {
-  final int index;
-
-  ProfileCardTenant({@required this.index});
 
   @override
   Widget build(BuildContext context) {
     List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    var index = Provider.of<HostelProvider>(context).selectedHostelIdx;
+
     Hostel hostelDetail = hostels[index];
     var gender = hostelDetail.gender.toString().split('.').last;
     return Scaffold(
@@ -176,6 +176,7 @@ class ProfileCardTenant extends StatelessWidget {
 
   Row buildHostelName(BuildContext context) {
     List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    var index = Provider.of<HostelProvider>(context).selectedHostelIdx;
     Hostel hostelDetail = hostels[index];
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,

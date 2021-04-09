@@ -2,7 +2,8 @@ import 'package:baze/models/hostel.dart';
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import 'review_widget.dart';
-import '../../../fake_repository.dart';
+import 'package:provider/provider.dart';
+import '../../../providers/hostel_provider.dart';
 
 class CustomTabs extends StatefulWidget {
   @override
@@ -14,11 +15,14 @@ class _CustomTabsState extends State<CustomTabs> {
 
   int selectedIndex = 0;
   var currentIndex = 0;
-   static var reviews = groupReviews('Alegro Hostel');
-  List<SingleReview> groupedReviews = reviews[0];
 
   @override
   Widget build(BuildContext context) {
+    var hostelIdx = Provider.of<HostelProvider>(context).selectedHostelIdx;
+    List<Hostel> hostels = Provider.of<List<Hostel>>(context);
+    List<List<SingleReview>> reviews =  Provider.of<HostelProvider>(context).groupReviews(hostels[hostelIdx]);
+    List<SingleReview> groupedReviews = reviews[selectedIndex];
+
     return Column(
       children: [
         Row(
@@ -63,7 +67,6 @@ class _CustomTabsState extends State<CustomTabs> {
                   setState(() {
                     selectedIndex = index;
                     currentIndex = index;
-                    groupedReviews = reviews[index];
                   });
                 },
               );

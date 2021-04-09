@@ -5,8 +5,7 @@ class FirestoreDatabase{
 
   final CollectionReference _hostelCollection = FirebaseFirestore.instance.collection('hostels');
 
-  Stream<List<Hostel>> get hostels {
-
+  Stream<List<Hostel>>  readHostels() {
     final Stream<QuerySnapshot> snapshots = _hostelCollection.snapshots();
 
     return snapshots.map((snapshot){
